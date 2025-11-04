@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'redir.php';
+include '../includes/redir.php';
 echo<<<_HEAD1
 <html>
 <body>

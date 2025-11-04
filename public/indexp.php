@@ -11,7 +11,7 @@ if(isset($_POST['fn']) &&
     <head>
     _HEAD1;
     
-    include 'menuf.php';
+    include '../includes/menuf.php';
     $_SESSION['forname'] = $_POST['fn'];
     $_SESSION['surname'] = $_POST['sn'];
     $smask =  $_SESSION['supmask'];
@@ -65,6 +65,6 @@ if(isset($_POST['fn']) &&
 _HEAD2;
     } // If the condition is not satisfied the user is redirected to the login page
     else { 
-  header('./complib.php');
+  header('Location: complib.php');
   }
 ?>

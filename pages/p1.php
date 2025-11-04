@@ -1,14 +1,14 @@
 <?php
 session_start();
 // Includes necessary files
-require_once 'login.php';
-include 'redir.php';
+require_once '../config/login.php';
+include '../includes/redir.php';
 echo<<<_HEAD1
 <html>
 <body>
 _HEAD1;
 // Includes the navigational menu
-include 'menuf.php';
+include '../includes/menuf.php';
 
 // Connecting using PDO
 try {

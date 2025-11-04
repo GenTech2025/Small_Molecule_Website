@@ -1,12 +1,12 @@
 <?php
 session_start();
-include 'redir.php';
-require_once 'login.php';
+include '../includes/redir.php';
+require_once '../config/login.php';
 echo <<<_HEAD1
 <html>
 <body>
 _HEAD1;
-include 'menuf.php';
+include '../includes/menuf.php';
 echo <<<_MAIN1
   <h3> This is the propeties Page </h3>
   <div style="text-align: center;"> 

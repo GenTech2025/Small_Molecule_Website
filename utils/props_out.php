@@ -1,14 +1,14 @@
 <?php
 session_start();
-require_once 'login.php';
-include 'redir.php';
+require_once '../config/login.php';
+include '../includes/redir.php';
 
 echo <<<_HEAD1
 <html>
 <body>
 _HEAD1;
 
-include 'menuf.php';
+include '../includes/menuf.php';
 
 // Refactored PDO connection setup
 try {

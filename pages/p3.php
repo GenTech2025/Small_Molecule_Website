@@ -1,14 +1,14 @@
 <?php
 session_start();
 // Including necessary files
-include 'redir.php';
-require_once 'login.php';
+include '../includes/redir.php';
+require_once '../config/login.php';
 echo<<<_HEAD1
 <html>
 <body>
 _HEAD1;
 // Including the navigation menu
-include 'menuf.php';
+include '../includes/menuf.php';
 $dbfs = array("natm","ncar","nnit","noxy","nsul","ncycl","nhdon","nhacc","nrotb","mw","TPSA","XLogP");
 $nms = array("n atoms","n carbons","n nitrogens","n oxygens","n sulphurs","n cycles","n H donors","n H acceptors","n rot bonds","mol wt","TPSA","XLogP");
 echo <<<_MAIN1

@@ -1,7 +1,7 @@
 <?php
 session_start();
-include 'menuf.php';
-require_once 'login.php';
+include '../includes/menuf.php';
+require_once '../config/login.php';
 echo <<<_HEAD
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">

@@ -1,15 +1,15 @@
 <?php
 session_start();
 // Includes the necessary files
-include 'redir.php';
-require_once 'login.php';
+include '../includes/redir.php';
+require_once '../config/login.php';
 
 echo <<< _HEAD1
 <html>
 <body>
 _HEAD1;
 // Includes the navigation menu
-include 'menuf.php';
+include '../includes/menuf.php';
 
  
 $dbfs = array("natm", "ncar", "nnit", "noxy", "nsul", "ncycl", "nhdon", "nhacc", "nrotb", "mw", "TPSA", "XLogP");
@@ -71,7 +71,7 @@ if (isset($_POST['tgval']) && isset($_POST['tgvalb'])) {
     $mansel .= ")";
     
     // Executing the python script which calculates the correlation
-    $comtodo = "python ./correlate3.py {$dbfs[$chosen]} {$dbfs[$chosenb]} \"$mansel\"";
+    $comtodo = "python " . __DIR__ . "/../scripts/correlate3.py {$dbfs[$chosen]} {$dbfs[$chosenb]} \"$mansel\"";
       echo "Correlation for {$nms[$chosen]} ({$dbfs[$chosen]}) vs {$nms[$chosenb]} ({$dbfs[$chosenb]})\n";
       $rescor = system($comtodo);
       echo "\n";

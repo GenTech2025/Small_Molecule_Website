@@ -1,11 +1,11 @@
 <?php
 session_start();
-include 'redir.php';
+include '../includes/redir.php';
 echo<<<_HEAD1
 <html>
 <body>
 _HEAD1;
-include 'menuf.php';
+include '../includes/menuf.php';
 echo <<<_MAIN1
     <pre>
 This is the Correlation Page  (not Complete)

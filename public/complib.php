@@ -1,11 +1,11 @@
 <?php
 session_start();
-require_once 'login.php';
+require_once '../config/login.php';
 echo<<<_HEAD1
 <html>
 <body>
 <head>
-   <link rel="stylesheet" type="text/css" href="style.css" />
+   <link rel="stylesheet" type="text/css" href="css/style.css" />
    <title>Landing Page</title>
    
 </head>   

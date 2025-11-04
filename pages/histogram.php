@@ -1,7 +1,7 @@
 <?php
 session_start();
-include 'redir.php';
-require_once 'login.php';
+include '../includes/redir.php';
+require_once '../config/login.php';
 
 // Heredoc string HTML
 echo<<<_HEAD1
@@ -9,7 +9,7 @@ echo<<<_HEAD1
 <body>
 _HEAD1;
 
-include 'menuf.php'; // Only contains HTML code so it will be shown on top of the page
+include '../includes/menuf.php'; // Only contains HTML code so it will be shown on top of the page
 
 $dbfs = array("natm", "ncar", "nnit", "noxy", "nsul", "ncycl", "nhdon", "nhacc", "nrotb", "mw", "TPSA", "XLogP");
 $nms = array("n atoms", "n carbons", "n nitrogens", "n oxygens", "n sulphurs", "n cycles", "n H donors", "n H acceptors", "n rot bonds", "mol wt", "TPSA", "XLogP");
@@ -66,7 +66,7 @@ if(isset($_POST['tgval'])) {
     $mansel .= ")";
     
     // Prepare command to run external program
-    $comtodo = "/localdisk/home/s2599932/public_html/histog.py" . $dbfs[$chosen] . " \"" . $nms[$chosen] . "\" \"" . $mansel . "\"";
+    $comtodo = __DIR__ . "/../scripts/histog.py " . $dbfs[$chosen] . " \"" . $nms[$chosen] . "\" \"" . $mansel . "\"";
     // Run command and capture output. Check if output is null before encoding
     $outputRaw = system($comtodo);
     

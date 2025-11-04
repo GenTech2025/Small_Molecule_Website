@@ -1,14 +1,14 @@
 <?php
 session_start();
 // Includes necessary files
-require_once 'login.php';
-include 'redir.php';
+require_once '../config/login.php';
+include '../includes/redir.php';
 
 // HTML defined as heredoc string with CSS code inside style tags to better represnt the output of query made
 echo <<< _HEAD1
 <html>
 <head>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../public/css/style.css">
   <style>
     .centertable {
         width: 100%;
@@ -26,7 +26,7 @@ echo <<< _HEAD1
 </head>
 <body>
 _HEAD1;
-include 'menuf.php'; 
+include '../includes/menuf.php'; 
 
 // Connecting to database using PDO
 try {
